@@ -1,0 +1,12 @@
+{
+  "datasetVersion": "synthetic-smoke-only",
+  "split": "validation",
+  "images": [
+    {
+      "participantId": "synthetic-1",
+      "imageId": "react-logo",
+      "path": "react-logo.png",
+      "reference": { "visible_acne": "unassessable" }
+    }
+  ]
+}

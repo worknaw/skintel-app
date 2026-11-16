@@ -1,0 +1,9 @@
+{
+  "calibrationSplit": "validation",
+  "calibrationDatasetVersion": "synthetic-smoke-only",
+  "modelVersion": "google/siglip2-base-patch16-224@75de2d55ec2d0b4efc50b3e9ad70dba96a7b2fa2",
+  "promptVersion": "skin-observation-experiment-v2",
+  "thresholds": {
+    "visible_acne": {"notObservedAtOrBelow": -1, "observedAtOrAbove": 1}
+  }
+}

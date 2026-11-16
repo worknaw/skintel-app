@@ -1,0 +1,79 @@
+# Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
+
+# dependencies
+node_modules/
+
+# Expo
+.expo/
+dist/
+web-build/
+expo-env.d.ts
+
+# Native
+.kotlin/
+*.orig.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+
+# Metro
+.metro-health-check*
+
+# debug
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+
+# macOS
+.DS_Store
+*.pem
+
+# local env files
+.env
+.env.*
+!.env.example
+.env*.local
+
+# typescript
+*.tsbuildinfo
+
+# tests
+coverage/
+
+# Local skin AI data may contain sensitive participant information
+/skin-ai-data/
+/.venv-skin-ai/
+/scripts/skin_ai/models/*
+!/scripts/skin_ai/models/skin-problem-yolo26.onnx
+!/scripts/skin_ai/models/face-detector-rfb-320.onnx
+/.venv-drive/
+
+example
+
+# generated native folders
+/ios
+/android
+
+# Android SDK path is machine-specific
+/android/local.properties
+
+# local tooling and generated diagnostics
+/.claude/
+/.idea/
+/.vscode/
+/.gradle-build/
+/.gradle-user/
+/.npm-cache/
+/.venv-*/
+*.log
+expo-env.d.ts
+
+# local Supabase and AI tooling state
+/supabase/.temp/
+/scripts/skin_ai/__pycache__/
+/api/__pycache__/
+/tools/*.exe
+/tools/*.whl
+/admin/config.js

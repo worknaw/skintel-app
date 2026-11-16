@@ -1,0 +1,8 @@
+{
+  "datasetVersion": "synthetic-test-only",
+  "split": "validation",
+  "modelVersion": "no-real-model",
+  "records": [
+    { "participantId": "synthetic-1", "imageId": "synthetic-image-1", "finding": "visible_acne", "reference": "observed", "predicted": "unassessable" }
+  ]
+}

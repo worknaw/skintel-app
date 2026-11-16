@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SkinCycle Admin</title>
+  <link rel="stylesheet" href="./styles.css?v=operations-20261116-5" />
+</head>
+<body>
+  <div id="authGate" class="auth-gate" hidden><div class="auth-card"><div class="brand-mark">✦</div><p class="eyebrow">SKINCYCLE ADMIN</p><h1>เข้าสู่ระบบหลังบ้าน</h1><p>ใช้บัญชีผู้ดูแลที่ได้รับอนุญาตเพื่อจัดการระบบ</p><form id="loginForm"><label>อีเมล<input id="loginEmail" type="email" autocomplete="email" required /></label><label>รหัสผ่าน<input id="loginPassword" type="password" autocomplete="current-password" required /></label><button class="primary-btn" type="submit">เข้าสู่ระบบ</button><div id="loginError" class="login-error" role="alert"></div></form></div></div>
+  <div class="app-shell" id="appShell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand-lockup"><div class="brand-mark">✦</div><div><strong>SkinCycle</strong><span>Admin console</span></div></div>
+      <div class="workspace-pill"><span class="status-dot"></span>Production workspace</div>
+      <nav class="nav-list" aria-label="เมนูหลัก">
+        <button class="nav-item active" data-section="overview"><span>⌂</span>ภาพรวม</button>
+        <button class="nav-item" data-section="analytics"><span>▥</span>Analytics</button>
+        <p class="nav-label">จัดการระบบ</p>
+        <button class="nav-item" data-section="orders"><span>▣</span>คำสั่งซื้อ<span class="nav-count orange" id="navOrdersCount" hidden></span></button>
+        <button class="nav-item" data-section="payments"><span>◈</span>ตรวจสลิป<span class="nav-count rose" id="navPaymentsCount" hidden></span></button>
+        <button class="nav-item" data-section="catalog"><span>◫</span>แคตตาล็อกสินค้า</button>
+        <button class="nav-item" data-section="shipping"><span>⌁</span>การจัดส่ง</button>
+        <button class="nav-item" data-section="users"><span>♙</span>ผู้ใช้งาน</button>
+        <p class="nav-label">ระบบอัจฉริยะ</p>
+        <button class="nav-item" data-section="scans"><span>◉</span>Skin Scan<span class="nav-count red" id="navScansCount" hidden></span></button>
+        <button class="nav-item" data-section="ai"><span>✧</span>AI Monitor</button>
+        <p class="nav-label">ดูแลระบบ</p>
+        <button class="nav-item" data-section="support"><span>☏</span>ช่วยเหลือ<span class="nav-count" id="navSupportCount" hidden></span></button>
+        <button class="nav-item" data-section="audit"><span>◌</span>บันทึกกิจกรรม</button>
+        <button class="nav-item" data-section="settings"><span>⚙</span>ตั้งค่าร้านค้า</button>
+      </nav>
+      <div class="sidebar-bottom"><button class="nav-item" data-action="help"><span>?</span>ศูนย์ช่วยเหลือ</button><button class="admin-profile" id="adminProfileButton" data-action="signout"><div class="avatar" id="adminAvatar">—</div><div><strong id="adminName">—</strong><span id="adminRole">ยังไม่ได้เข้าสู่ระบบ</span></div><span class="more">↪</span></button></div>
+    </aside>
+    <main class="main-content">
+      <header class="topbar"><button class="mobile-menu" id="mobileMenu">☰</button><div class="breadcrumbs"><span>SkinCycle</span><b>/</b><strong id="breadcrumbCurrent">ภาพรวม</strong></div><div class="topbar-actions"><button class="icon-button" data-action="global-search" aria-label="ค้นหาทั้งระบบ">⌕</button><button class="icon-button notification" data-action="notifications" aria-label="การแจ้งเตือน">♢</button><div class="topbar-divider"></div><span class="today" id="todayLabel">—</span></div></header>
+      <div class="page-wrap" id="pageWrap"></div>
+    </main>
+  </div>
+  <div class="toast" id="toast"></div>
+  <div class="modal-backdrop" id="modalBackdrop"><section class="detail-modal"><button class="modal-close" id="modalClose">×</button><div id="modalBody"></div></section></div>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="./config.js"></script>
+  <script src="./app.js?v=operations-20261116-5"></script>
+  <script src="./live.js?v=operations-20261116-5"></script>
+</body>
+</html>
